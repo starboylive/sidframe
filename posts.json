@@ -1,0 +1,17 @@
+[
+    {
+    "id": 2,
+      "title": "Learning JavaScript the Right Way",
+      "date": "2025-11-25",
+      "excerpt": "A raw, honest guide to learning JavaScript without falling into tutorial hell or fake productivity traps.",
+      "content": "Let’s be real for a second. Most people don’t learn JavaScript. They survive it. They bounce from one tutorial to another, copy-paste code, feel productive for a few hours, and then completely freeze the moment they try to build something on their own.\n\nThat’s not learning. That’s dependency.\n\nThe right way to learn JavaScript isn’t about speed. It’s about depth. And depth feels uncomfortable. That’s the part everyone avoids.\n\nFirst, stop treating JavaScript like a checklist. Learning JS isn’t memorising syntax like const, let, or arrow functions. Syntax is the easy part. Logic is the battlefield. If you don’t understand how the code thinks, you’ll always stay stuck googling basic stuff.\n\nSecond, build while you learn. Not after. Watching 10 tutorials before touching your keyboard is self-sabotage disguised as preparation. Write bad code. Break things. Fix them. That’s how your brain rewires.\n\nThird, embrace confusion. When something doesn’t make sense, don’t skip it. Sit with it. Debug. Ask why. Real growth happens in those frustrating moments when nothing works and you refuse to quit anyway.\n\nAnd finally, stop rushing mastery. JavaScript isn’t a side quest. It’s a language. And like any language, fluency comes from repetition, mistakes, and time.\n\nIf you truly want to learn JavaScript the right way, here’s the formula:\n\nUnderstand > Apply > Break > Fix > Repeat\n\nNo shortcuts. No magic roadmap. Just real work.\n\nThat’s how developers are built.",
+      "image": "images/learningJS.png" 
+    },
+ {
+    "id": 1,
+    "title": "TestPost",
+    "date": "2025-11-24",
+    "excerpt": "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  }
+]

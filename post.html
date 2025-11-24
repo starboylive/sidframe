@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>sidframe</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="images/faavicon.png" type="image/x-icon"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<a href="index.html" class="back">← Back to Blog</a>
+
+<main class="post-container" id="post"></main>
+
+<div class="contact">
+    <h2>Enjoyed the post?</h2>
+    <p>Feel free to reach out or share your thoughts!</p>
+    <a href="about.html" id="nav-btn-c">Connect With Me!</a>
+</div>
+
+<script>
+const id = new URLSearchParams(window.location.search).get("id");
+
+fetch("posts.json")
+.then(res => res.json())
+.then(posts => {
+  const post = posts.find(p => p.id == id);
+
+  document.getElementById("post").innerHTML = `
+  <h1>${post.title}</h1>
+  <p class="date">${post.date}</p>
+  ${post.image ? `<img src="${post.image}" class="post-image">` : ""}
+  <div class="content">${post.content}</div>
+`;
+
+});
+</script>
+</body>
+</html>
