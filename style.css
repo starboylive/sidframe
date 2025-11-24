@@ -121,14 +121,14 @@ header input {
 
 /* SINGLE POST */
 .post-container {
-  max-width: 800px;
-  margin: 60px auto;
-  padding: 20px;
+  max-width: 50rem;
+  margin: 6rem auto;
+  padding: 2rem;
 }
 
 .back {
   display: block;
-  margin: 20px;
+  margin: 2rem;
   color: #5895ff;
   text-decoration: none;
 }
@@ -136,6 +136,27 @@ header input {
 .content {
   margin-top: 20px;
   line-height: 1.6;
+}
+
+.author {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  
+  width: fit-content;
+  background: #222222;
+  border-radius: 0.5rem;
+  font-family: "manrope", sans-serif;
+  font-style: italic;
+  font-weight: 100;
+  transition: 0.2s ease;
+}
+.author:hover {
+  background: #005dff;
+  color: #f2f2f2;
+  transition: 0.3s ease;
+  cursor: pointer;
 }
 
 .post-thumb {

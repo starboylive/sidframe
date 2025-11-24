@@ -35,6 +35,8 @@ fetch("posts.json")
   <p class="date">${post.date}</p>
   ${post.image ? `<img src="${post.image}" class="post-image">` : ""}
   <div class="content">${post.content}</div>
+  <div class="content">${post.Morecontent}</div>
+  <div class="author">${post.Author}</div>
 `;
 
 });
