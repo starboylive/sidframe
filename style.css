@@ -373,11 +373,11 @@ header input {
   }
 }
 
-
+/* 
 @media (hover: none) {
   #nav-btn:hover,
   #linked:hover,
   .post-card:hover {
     transform: none;
   }
-}
+} */
