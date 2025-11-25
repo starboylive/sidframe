@@ -1,6 +1,6 @@
 [
   {
-    "id": 3,
+    "id": 2,
     "title": "How I Approach Learning New Tech Without Feeling Overwhelmed",
     "excerpt": "Feeling overwhelmed when learning new tech is normal—but it doesn’t have to stop you. By breaking concepts into small chunks, learning by doing, tracking progress, and focusing on your own pace, you can make the process manageable and even enjoyable.",
     "Author": "source - internet",
@@ -41,7 +41,7 @@
   },
   
   {
-    "id": 2,
+    "id": 1,
     "title": "Learning JavaScript the Right Way",
     "date": "2025-11-24",
     "category": "JavaScript",
@@ -144,17 +144,6 @@
       "learning",
       "webdev",
       "beginners"
-    ]
-  },
- {
-    "id": 1,
-    "title": "TestPost",
-    "date": "2025-11-24",
-    "excerpt": "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    "tags": [
-      "Test",
-      "Sample"
     ]
   }
 ]
