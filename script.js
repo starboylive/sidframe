@@ -41,3 +41,15 @@ document.getElementById("searchInput").addEventListener("input", function() {
   );
   renderPosts(filtered);
 });
+
+const searchInput = document.getElementById("searchInput"); // your existing search bar
+searchInput.addEventListener("input", (e) => {
+  const query = e.target.value.toLowerCase();
+
+  // filter posts where any tag matches the search query
+  const filteredPosts = allPosts.filter(post =>
+    post.tags.some(tag => tag.toLowerCase().includes(query))
+  );
+
+  renderPosts(filteredPosts);
+});
