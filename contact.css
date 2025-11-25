@@ -122,10 +122,6 @@ body {
         margin-top: 15%;
         padding: 1.5rem;
     }
-    .bmc-button {
-    transform: scale(1.2); /* Adjust size: 1 = 100%, 0.8 = 80%, etc. */
-    transform-origin: bottom right; /* Keep it anchored */
-}
 }
 
 @media (max-width: 600px) {
@@ -156,4 +152,5 @@ body {
     .back {
         margin: 1rem;
     }
+    
 }
