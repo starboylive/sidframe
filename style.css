@@ -193,3 +193,154 @@ header input {
   font-size: 1.2rem;
   margin-bottom: 1rem;
 }
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 4rem;
+  border-top: 0.0625rem solid #333;
+  color: #777;
+}
+
+/* MAIN CONTAINER */
+.eren {
+  min-height: 15vh;
+  width: 90%;
+  max-width: 70rem;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* INFO BOXES */
+.info {
+  flex: 1 1 12rem;
+  min-width: 12rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  font-size: clamp(0.9rem, 1vw, 1.05rem);
+  text-align: left;
+  padding: 0.5rem;
+}
+
+/* LINKS */
+#linked {
+  color: #808080;
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+#linked:hover {
+  color: #005dff;
+  transform: scale(1.05);
+}
+
+/* SMALL SCREENS */
+@media (max-width: 48rem) {
+  .eren {
+    justify-content: center;
+  }
+
+  .info {
+    flex: 1 1 100%;
+  }
+}
+
+/* VERY SMALL DEVICES */
+@media (max-width: 30rem) {
+  footer {
+    padding: 1.5rem 1rem;
+  }
+
+  .info h3 {
+    font-size: 1rem;
+  }
+
+  .info p {
+    font-size: 0.9rem;
+  }
+}
+
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Prevent horizontal overflow */
+body {
+  overflow-x: hidden;
+}
+
+
+#heading {
+  font-size: clamp(3.5rem, 12vw, 10rem);
+  letter-spacing: clamp(-0.2rem, -1vw, -0.7rem);
+}
+
+header p {
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+}
+
+header input {
+  width: min(90%, 20rem);
+}
+
+.navbar {
+  width: min(90%, 50%);
+  flex-wrap: wrap;
+}
+
+.blog-container {
+  padding: 0 1rem;
+}
+
+.post-container {
+  margin: 3rem auto;
+  padding: clamp(1rem, 3vw, 2rem);
+}
+
+.eren {
+  width: min(90%, 70rem);
+}
+
+@media (max-width: 768px) {
+  .eren {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .info {
+    width: 100%;
+  }
+}
+
+.post-thumb,
+.post-image {
+  height: auto;
+}
+
+
+@media (hover: none) {
+  #nav-btn:hover,
+  #linked:hover,
+  .post-card:hover {
+    transform: none;
+  }
+}
