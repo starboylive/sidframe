@@ -1,6 +1,47 @@
 [
-  {
+    {
     "id": 3,
+    "title": "Why Instagram Feeds Are Addictive: A Design Breakdown",
+    "excerpt": "Ever wondered why you open Instagram for 2 minutes and suddenly an hour is gone? It’s not a coincidence. This blog breaks down the design, psychology, and algorithms that make Instagram so addictive.",
+    "Author": "source - internet",
+    "image": "images/instagramAddictive.jpg",
+    "date": "2025-11-25",
+    "tags": [
+      "social media",
+      "design",
+      "psychology",
+      "tech"
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "You open Instagram for “just 2 minutes.” Two minutes later, your thumb is sore, your brain is fried, and somehow… an hour has vanished. Feels familiar? That’s not an accident. Instagram is designed to keep you scrolling, liking, and staring. Let’s break down how—and why—it works."
+      },
+      {
+        "type": "paragraph",
+        "text": "Ever noticed how the feed never ends? That’s the infinite scroll in action. No natural stopping point = no reason to put your phone down. Every post is a mini reward: sometimes it’s hilarious, sometimes it’s inspiring, sometimes it’s… nothing—but you scroll anyway, hoping the next one hits. Psychologists call this the variable reward system. It’s literally the same mechanism that makes slot machines addictive."
+      },
+      {
+        "type": "paragraph",
+        "text": "Instagram doesn’t just throw random posts at you. The feed is hyper-personalized. The algorithm watches what you like, comment on, and linger over. Every double-tap, every pause, every swipe is data that shapes your next scroll. The result? A feed that feels “made for you” and keeps pulling you back. Basically, it knows what you want—even before you do."
+      },
+      {
+        "type": "paragraph",
+        "text": "That tiny red dot on the bell? Those heart notifications? Even small interactions trigger dopamine hits. Story reactions, comments, and reel suggestions make your brain think, “Something important just happened!” Each alert is a tiny hook, a subtle nudge to open the app again. Micro-interactions like these may seem harmless, but they keep your attention fragmented, glued, and coming back for more."
+      },
+      {
+        "type": "paragraph",
+        "text": "Colors, layout, motion—Instagram’s designers know what draws your eye: The endless feed illusion keeps content flowing. Motion cues like “hearts popping” or smooth transitions give the brain little hits of satisfaction. Even the contrast between white background and colored elements subtly guides your focus. It’s all carefully engineered. Every swipe, tap, and scroll is optimized to keep you in the loop."
+      },
+      {
+        "type": "paragraph",
+        "text": "You don’t have to be a victim of design psychology: Set time limits for app usage, turn off non-essential notifications, and be conscious: ask yourself, “Am I scrolling for a reason, or just because it’s endless?” Instagram can be entertaining—but knowing the mechanics helps you reclaim your time."
+      }
+    ]
+  },
+    
+  {
+    "id": 2,
     "title": "How I Approach Learning New Tech Without Feeling Overwhelmed",
     "excerpt": "Feeling overwhelmed when learning new tech is normal—but it doesn’t have to stop you. By breaking concepts into small chunks, learning by doing, tracking progress, and focusing on your own pace, you can make the process manageable and even enjoyable.",
     "Author": "source - internet",
@@ -41,7 +82,7 @@
   },
   
   {
-    "id": 2,
+    "id": 1,
     "title": "Learning JavaScript the Right Way",
     "date": "2025-11-24",
     "category": "JavaScript",
@@ -144,17 +185,6 @@
       "learning",
       "webdev",
       "beginners"
-    ]
-  },
- {
-    "id": 1,
-    "title": "TestPost",
-    "date": "2025-11-24",
-    "excerpt": "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    "tags": [
-      "Test",
-      "Sample"
     ]
   }
 ]
