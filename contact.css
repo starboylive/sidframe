@@ -123,7 +123,7 @@ body {
         padding: 1.5rem;
     }
     .bmc-button {
-    transform: scale(0.8); /* Adjust size: 1 = 100%, 0.8 = 80%, etc. */
+    transform: scale(1.2); /* Adjust size: 1 = 100%, 0.8 = 80%, etc. */
     transform-origin: bottom right; /* Keep it anchored */
 }
 }
