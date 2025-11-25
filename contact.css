@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0f0f0f;
+    color: #edf1f5;
+    min-height: 100vh;
+}
+
+/* Back button */
+.back {
+    display: block;
+    margin: 1.5rem;
+    color: #5895ff;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+.back:hover { opacity: 0.7; }
+
+/* Main container */
+.contact-container {
+    max-width: 900px;
+    margin: 8% auto 5% auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Headings */
+.contact-heading {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    letter-spacing: -0.03rem;
+}
+
+.contact-subtext {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+/* FORM */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin: 2rem auto;
+    width: 30%;
+    min-width: 270px;
+}
+
+/* Inputs */
+.contact-input,
+.contact-textarea {
+    font-family: 'Courier New', monospace;
+    padding: 0.9rem;
+    border-radius: 1rem;
+    border: none;
+    font-size: 1rem;
+    color: #edf1f5;
+    background: linear-gradient(270deg, #001f4d, #0a0f3b, #0a0f3b, #003366);
+    background-size: 800% 800%;
+    animation: gradientShift1 10s ease infinite;
+}
+
+@keyframes gradientShift1 {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Button */
+.contact-btn {
+    padding: 0.8rem;
+    border-radius: 1rem;
+    border: none;
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: #ffb7ce;
+    color: #333;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.contact-btn:hover {
+    background-color: #e60073;
+    color: #edf1f5;
+    transform: scale(1.05);
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.8rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    color: #ff7fa7;
+    font-size: 1rem;
+    transition: 0.3s ease;
+}
+
+.social-link:hover {
+    transform: scale(1.07);
+}
+
+/* -------------------------------
+   MOBILE RESPONSIVE OPTIMIZATION
+--------------------------------*/
+
+@media (max-width: 900px) {
+    .contact-container {
+        margin-top: 15%;
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-heading {
+        font-size: 1.6rem;
+    }
+
+    .contact-subtext {
+        font-size: 0.9rem;
+    }
+
+    .contact-form {
+        width: 85%;
+    }
+
+    .social-links {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .contact-heading {
+        font-size: 1.4rem;
+    }
+    .contact-subtext {
+        font-size: 0.85rem;
+    }
+    .back {
+        margin: 1rem;
+    }
+}
