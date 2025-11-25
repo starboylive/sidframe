@@ -54,6 +54,19 @@ header input {
   width: 50%;
 }
 
+.fa-mug-hot{
+    color: #ffe600;
+    font-size: 1.5rem;
+    transition: 0.2s ease;
+    float: right;
+}
+.fa-mug-hot:hover{
+    color: #ffd900;
+    transform: scale(1.2, 1.2);
+    cursor:pointer;
+}
+
+
 #nav-btn{
     color: #f2f2f2;
     text-decoration: none;
