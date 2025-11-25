@@ -15,6 +15,11 @@ function renderPosts(posts) {
     const card = document.createElement("div");
     card.classList.add("post-card");
 
+    card.onclick = () => {
+      window.location.href = `post.html?id=${post.id}`;
+    };
+
+
     card.innerHTML = `
       ${post.image ? `<img src="${post.image}" class="post-thumb">` : ""}  
       <h2>${post.title}</h2>
