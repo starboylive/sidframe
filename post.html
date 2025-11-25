@@ -29,17 +29,41 @@ fetch("posts.json")
 .then(res => res.json())
 .then(posts => {
   const post = posts.find(p => p.id == id);
+  const postContainer = document.getElementById("post");
 
-  document.getElementById("post").innerHTML = `
-  <h1>${post.title}</h1>
-  <p class="date">${post.date}</p>
-  ${post.image ? `<img src="${post.image}" class="post-image">` : ""}
-  <div class="content">${post.content}</div>
-  <div class="content">${post.Morecontent}</div>
-  <div class="author">${post.Author}</div>
-`;
+  // Title and metadata
+  postContainer.innerHTML = `
+    <h1>${post.title}</h1>
+    <p class="date">${post.date}</p>
+    ${post.image ? `<img src="${post.image}" class="post-image">` : ""}
+  `;
 
+  // Render content dynamically
+  post.content.forEach(block => {
+    if(block.type === "paragraph") {
+      const p = document.createElement("p");
+      p.textContent = block.text;
+      postContainer.appendChild(p);
+    }
+    // If you want, you can handle other block types like headings, code, etc.
+  });
+
+  // Optional additional sections
+  if(post.Morecontent){
+    const more = document.createElement("div");
+    more.classList.add("content");
+    more.textContent = post.Morecontent;
+    postContainer.appendChild(more);
+  }
+
+  if(post.Author){
+    const authorDiv = document.createElement("div");
+    authorDiv.classList.add("author");
+    authorDiv.textContent = post.Author;
+    postContainer.appendChild(authorDiv);
+  }
 });
 </script>
+
 </body>
 </html>

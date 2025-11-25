@@ -141,9 +141,9 @@ header input {
 
 .author {
   margin-top: 1rem;
-  padding: 0.5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding: 0.3rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   
   width: fit-content;
   background: #222222;
@@ -151,6 +151,7 @@ header input {
   font-family: "manrope", sans-serif;
   font-style: italic;
   font-weight: 100;
+  font-size: 0.8rem;
   transition: 0.2s ease;
 }
 .author:hover {
