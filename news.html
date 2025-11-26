@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidframe - News</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="news.css" />
+    <link rel="shortcut icon" href="images/faavicon.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <a href="index.html" class="back">← Back to Blog</a>
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a id="nav-btn-l" href="index.html" class="logo">sidframe.</a>
+            <nav class="nav-links">
+                <a id="nav-btn-n" href="blog.html">Blog</a>
+                <a id="nav-btn-n" href="news.html" class="active">News</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- PAGE HEADING -->
+    <section class="page-header">
+        <h1>News & Updates</h1>
+        <p>All official updates, announcements, and platform changes.</p>
+    </section>
+
+    <!-- SEARCH BAR -->
+    <section class="search-section">
+        <input type="text" id="searchInput" placeholder="Search news by title or tag..." />
+    </section>
+
+    <!-- NEWS CONTAINER -->
+    <section class="blog-section">
+        <div class="blog-container"></div>
+    </section>
+
+    <div class="contact">
+        <h2>Enjoyed the post?</h2>
+        <p>Feel free to reach out or share your thoughts!</p>
+        <a href="contact.html" id="nav-btn-c">Connect With Me!</a>
+    </div>
+
+
+
+    <script>
+
+        const API_KEY = "740a4eed88ab433abd97d4ca03a3e926";
+        const container = document.querySelector(".blog-container");
+
+        let allNews = [];
+
+        fetch(`https://newsapi.org/v2/everything?q=india&sortBy=publishedAt&pageSize=12&apiKey=${API_KEY}
+`)
+            .then(res => res.json())
+            .then(data => {
+                allNews = data.articles;
+                renderNews(allNews);
+            });
+
+        fetchNews();
+        setInterval(fetchNews, 300000);
+
+        function renderNews(news) {
+            container.innerHTML = "";
+
+            if (news.length === 0) {
+                container.innerHTML = `<p class="no-posts">No news found.</p>`;
+                return;
+            }
+
+            news.forEach(article => {
+                const card = document.createElement("div");
+                card.classList.add("post-card");
+
+                card.innerHTML = `
+            ${article.urlToImage ? `<img src="${article.urlToImage}" />` : ``}
+            <div class="post-content">
+            <span class="news-badge">LIVE</span>
+            <h2>${article.title}</h2>
+            <p>${article.description || ""}</p>
+            <div class="post-meta">
+                <span>${article.source.name}</span>
+                <span>${new Date(article.publishedAt).toLocaleDateString()}</span>
+            </div>
+            </div>
+        `;
+
+                card.addEventListener("click", () => {
+                    window.open(article.url, "_blank");
+                });
+
+                container.appendChild(card);
+            });
+
+
+        }
+
+
+        // SEARCH FILTER
+        const searchInput = document.getElementById("searchInput");
+
+        searchInput.addEventListener("input", () => {
+            const query = searchInput.value.toLowerCase();
+
+            const filtered = allNews.filter(article =>
+                article.title.toLowerCase().includes(query) ||
+                (article.description && article.description.toLowerCase().includes(query))
+            );
+
+            renderNews(filtered);
+        });
+
+
+    </script>
+
+</body>
+
+</html>

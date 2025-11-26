@@ -245,6 +245,24 @@ footer {
   padding: 0.5rem;
 }
 
+.search-section {
+  display: flex;
+  justify-content: center;
+  padding: 1.2rem 2rem 2.5rem;
+}
+
+#searchInput {
+  width: 100%;
+  max-width: 40rem;
+  padding: 0.9rem 1.2rem;
+  border-radius: 0.8rem;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.03);
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+
 /* LINKS */
 #linked {
   color: #808080;
@@ -389,11 +407,3 @@ header input {
   }
 }
 
-/* 
-@media (hover: none) {
-  #nav-btn:hover,
-  #linked:hover,
-  .post-card:hover {
-    transform: none;
-  }
-} */
