@@ -185,7 +185,7 @@
       "learning",
       "webdev",
       "beginners",
-      "my projects"
+      "personalWork"
     ]
   }
 ,
@@ -276,7 +276,7 @@
     "Author": "Sid",
     "image": "images/CLI.png",
     "date": "2026-07-09",
-    "tags": ["my projects", "cli", "scaffolder"],
+    "tags": ["personalWork", "cli", "scaffolder"],
     "content": [
       {"type":"paragraph","text":"This small CLI automates creating a new project with opinionated defaults: a README, .gitignore, basic folder structure, and an npm or pip setup depending on the template you choose."},
       {"type":"heading","level":2,"text":"Install"},

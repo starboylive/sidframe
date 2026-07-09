@@ -11,25 +11,10 @@ function loadProjects(){
             return r.json();
         })
         .then(posts => {
-            // match tags that include 'project' (case-insensitive) to be more flexible
-            const projects = posts.filter(p => (p.tags||[]).some(t => t && t.toString().toLowerCase().trim().includes('project')));
-            console.log('projects.js: found', projects.length, 'project posts');
+            const projects = posts.filter(p => (p.tags||[]).some(t => t && t.toString().toLowerCase().trim() === 'personalwork'));
+            console.log('projects.js: found', projects.length, 'personalWork posts');
             allProjects = projects;
-            if(!projects.length){
-                // fallback: show all posts so page isn't empty
-                console.info('projects.js: no project-tagged posts, showing all posts as fallback');
-                if(projectsContainer){
-                    const note = document.createElement('p');
-                    note.className = 'no-posts';
-                    note.textContent = "No project-tagged posts found — showing all posts as fallback.";
-                    projectsContainer.innerHTML = '';
-                    projectsContainer.appendChild(note);
-                }
-                allProjects = posts;
-                renderProjects(posts);
-            } else {
-                renderProjects(projects);
-            }
+            renderProjects(projects);
         })
         .catch(e => {
             console.error('Could not load posts.json', e);
@@ -61,7 +46,7 @@ function renderProjects(news){
         const link = `post.html?id=${article.id || ''}`;
 
         const card = document.createElement('div');
-        card.className = 'post-card';
+        card.className = 'post-card in-view';
         card.innerHTML = `
             <a class="news-media" href="${link}">
               <img src="${img}" class="post-thumb" alt="${title}">
