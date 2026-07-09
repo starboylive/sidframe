@@ -193,7 +193,7 @@
     "title": "Design Systems for Small Teams",
     "excerpt": "A practical approach to design systems that scales for teams under 10 — components, tokens, and workflow.",
     "Author": "Sid",
-    "image": "images/main.png",
+    "image": "images/design.png",
     "date": "2026-01-15",
     "tags": ["design","css","patterns"],
     "content": [
@@ -209,7 +209,7 @@
     "title": "A Minimal Guide to Docker for Developers",
     "excerpt": "Docker for developers who want a no-fluff, practical workflow — build, run, and debug containers locally.",
     "Author": "Sid",
-    "image": "images/learningTech.jpg",
+    "image": "images/Minimal.png",
     "date": "2025-12-05",
     "tags": ["devops","docker","workflow"],
     "content": [
@@ -225,7 +225,7 @@
     "title": "Async Patterns in JavaScript — Promises vs Observables",
     "excerpt": "When to use Promises, async/await, and when to reach for Observables — a pragmatic comparison.",
     "Author": "Sid",
-    "image": "images/learningJS.png",
+    "image": "images/Async.png",
     "date": "2026-02-02",
     "tags": ["javascript","async","rxjs"],
     "content": [
@@ -241,6 +241,7 @@
     "title": "Accessibility Checklist for Frontend Developers",
     "excerpt": "A short, practical accessibility checklist you can run through before shipping a page.",
     "Author": "Sid",
+    "image": "images/Accessibility.png", 
     "date": "2026-03-08",
     "tags": ["accessibility","a11y","frontend"],
     "content": [
@@ -256,7 +257,7 @@
     "title": "Building a Tiny CLI with Node",
     "excerpt": "How to build, test and distribute a small command-line tool using Node and npm.",
     "Author": "Sid",
-    "image": "images/main.png",
+    "image": "images/CLI.png",
     "date": "2026-04-01",
     "tags": ["node","cli","tools"],
     "content": [
