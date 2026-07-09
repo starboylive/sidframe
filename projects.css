@@ -1,0 +1,39 @@
+/* projects.css
+   Page-specific styles for projects.html
+   You can add custom overrides here. Currently imports base styles via style.css and news.css.
+*/
+
+.page-header h1 { /* slightly smaller on projects page */
+  font-size: clamp(2rem, 5vw, 5rem);
+}
+
+#nav-btn-l{
+    font-size: 6rem;
+    letter-spacing: -0.4rem;
+}
+
+.nav-links{
+    margin-bottom: 1rem;
+}
+
+.navbar{
+    margin: auto;
+    border-radius: 2rem;
+}
+
+.page-header{
+
+    margin-top: -2rem;
+}
+
+.search-section{
+    margin-top: -2rem;
+}
+
+/* ensure project cards align like the news/home layout */
+.blog-container { gap: 1.25rem; }
+
+.post-content p { opacity: 0.85; }
+
+.news-link, .news-media { color: inherit; text-decoration: none; }
+.news-link:hover, .news-media:hover { text-decoration: underline; }

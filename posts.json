@@ -267,4 +267,22 @@
       {"type":"paragraph","text":"Distribution: set the `bin` field in `package.json` and publish to npm under a scoped name if needed. Provide a short installation snippet in the README so users can try your tool quickly."}
     ]
   }
+,
+  {
+    "id": 9,
+    "title": "Tiny CLI: Project Scaffolder",
+    "excerpt": "A tiny CLI that scaffolds project templates, installs dependencies, and bootstraps a README.",
+    "Author": "Sid",
+    "image": "images/CLI.png",
+    "date": "2026-07-09",
+    "tags": ["my projects", "cli", "scaffolder"],
+    "content": [
+      {"type":"paragraph","text":"This small CLI automates creating a new project with opinionated defaults: a README, .gitignore, basic folder structure, and an npm or pip setup depending on the template you choose."},
+      {"type":"heading","level":2,"text":"Install"},
+      {"type":"code","text":"npm i -g tiny-scaffold-cli"},
+      {"type":"heading","level":2,"text":"Create a project"},
+      {"type":"code","text":"tiny-scaffold create my-app --template=web --install"},
+      {"type":"paragraph","text":"The CLI supports templates (web, node, python), an interactive mode, and a `--install` flag to run the package manager after scaffolding. It’s intentionally small and easy to extend."}
+    ]
+  }
 ]
