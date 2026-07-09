@@ -187,4 +187,83 @@
       "beginners"
     ]
   }
+,
+  {
+    "id": 4,
+    "title": "Design Systems for Small Teams",
+    "excerpt": "A practical approach to design systems that scales for teams under 10 — components, tokens, and workflow.",
+    "Author": "Sid",
+    "image": "images/main.png",
+    "date": "2026-01-15",
+    "tags": ["design","css","patterns"],
+    "content": [
+      {"type":"paragraph","text":"Design systems don't need to be huge to be useful. For small teams, the goal is consistency with minimal overhead: shared tokens, a single component library, and lightweight documentation."},
+      {"type":"paragraph","text":"Start with colors, spacing, and a few core components. Automate what you can — tokens in code and documentation that lives with the repo."},
+      {"type":"paragraph","text":"A practical approach is to create a tiny 'starter' package that exports tokens and a handful of components (Button, Input, Card). Ship that as a git submodule or private package and update it when the team agrees on changes."},
+      {"type":"paragraph","text":"Versioning matters: use semantic versioning and keep breaking changes behind major releases. For day-to-day work, favor additive changes and maintain a single page of examples so engineers and designers can see behaviour without jumping into implementation details."},
+      {"type":"paragraph","text":"Finally, document design decisions, not every tiny rule. A few well-written notes on why a token exists reduces bikeshedding and helps future contributors make better choices faster."}
+    ]
+  },
+  {
+    "id": 5,
+    "title": "A Minimal Guide to Docker for Developers",
+    "excerpt": "Docker for developers who want a no-fluff, practical workflow — build, run, and debug containers locally.",
+    "Author": "Sid",
+    "image": "images/learningTech.jpg",
+    "date": "2025-12-05",
+    "tags": ["devops","docker","workflow"],
+    "content": [
+      {"type":"paragraph","text":"Docker can feel heavy. This guide focuses on a small, repeatable pattern: a dev Dockerfile, docker-compose for multi-service runs, and a few debugging tips to avoid rebuild hell."},
+      {"type":"paragraph","text":"Start by splitting your Dockerfile into stages: a builder stage for compiling assets and a lightweight runtime stage. This keeps images small and speeds up CI pulls."},
+      {"type":"paragraph","text":"For local development, use docker-compose with bind mounts and a named volume for dependencies so you don't trash node_modules every restart. This pattern lets you iterate quickly while keeping a reproducible image for CI."},
+      {"type":"paragraph","text":"Debugging tips: run containers with an interactive shell (`docker run -it --entrypoint sh`) and inspect layers with `docker history` when images grow unexpectedly. Use labels to identify test images and clean up often with `docker system prune` to save disk space."},
+      {"type":"paragraph","text":"Finally, document how to reproduce the dev environment with one command. A readable `docker-compose.yml` and a short README cut onboarding time for new team members."}
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Async Patterns in JavaScript — Promises vs Observables",
+    "excerpt": "When to use Promises, async/await, and when to reach for Observables — a pragmatic comparison.",
+    "Author": "Sid",
+    "image": "images/learningJS.png",
+    "date": "2026-02-02",
+    "tags": ["javascript","async","rxjs"],
+    "content": [
+      {"type":"paragraph","text":"Promises and async/await are perfect for single-result async flows. Observables shine when you need streams, cancellation, and composability over time."},
+      {"type":"paragraph","text":"A good rule of thumb: use Promises for one-shot operations (HTTP calls, filesystem reads) and Observables for ongoing streams (user input, WebSocket messages). Each tool has trade-offs in complexity and ergonomics."},
+      {"type":"paragraph","text":"Examples help: converting a `mousemove` event into an Observable lets you throttle and map the stream easily, while a Promise-based approach requires manual wiring for cleanup and cancellation."},
+      {"type":"paragraph","text":"Performance and memory: Observables can hold onto subscriptions — always unsubscribe in component unmounts or use operators like `takeUntil`. Promises don’t have this lifecycle, so they’re simpler to reason about for isolated tasks."},
+      {"type":"paragraph","text":"When in doubt, start with Promises. Reach for Observables when you have clear needs for stream composition, cancellation, or multiple derived values over time."}
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Accessibility Checklist for Frontend Developers",
+    "excerpt": "A short, practical accessibility checklist you can run through before shipping a page.",
+    "Author": "Sid",
+    "date": "2026-03-08",
+    "tags": ["accessibility","a11y","frontend"],
+    "content": [
+      {"type":"paragraph","text":"Accessibility isn't a huge checklist — it's a set of habits. Use semantic HTML, ensure color contrast, keyboard support, and provide meaningful alt text for images."},
+      {"type":"paragraph","text":"Start with keyboard navigation: ensure all interactive elements are reachable with Tab and that focus styles are visible. Screen reader users rely on logical focus order and descriptive labels."},
+      {"type":"paragraph","text":"Color contrast: run your palette through an automated contrast checker. Aim for AA at minimum for body text and consider larger text for headings if contrast is marginal."},
+      {"type":"paragraph","text":"Forms: associate labels with inputs using `for` and `id`, provide clear error messages, and avoid placeholder text as the only label. ARIA can help, but prefer native HTML semantics first."},
+      {"type":"paragraph","text":"This post includes a printable checklist, sample ARIA snippets that are helpful (not harmful), and a short guide to testing with NVDA/VoiceOver and keyboard-only navigation."}
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Building a Tiny CLI with Node",
+    "excerpt": "How to build, test and distribute a small command-line tool using Node and npm.",
+    "Author": "Sid",
+    "image": "images/main.png",
+    "date": "2026-04-01",
+    "tags": ["node","cli","tools"],
+    "content": [
+      {"type":"paragraph","text":"A CLI doesn't need to be complex. We'll scaffold a tiny tool, add argument parsing, and publish a scoped package so others can install it."},
+      {"type":"paragraph","text":"Start with a robust argument parser (yargs or commander), write clear help text, and expose a `--version` and `--help` flag. Keep the core logic testable by separating parsing from implementation."},
+      {"type":"paragraph","text":"Testing CLIs: use integration tests that spawn the binary and verify stdout and exit codes. For unit tests, inject dependencies and avoid shelling out inside core modules."},
+      {"type":"paragraph","text":"Distribution: set the `bin` field in `package.json` and publish to npm under a scoped name if needed. Provide a short installation snippet in the README so users can try your tool quickly."}
+    ]
+  }
 ]

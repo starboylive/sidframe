@@ -6,12 +6,14 @@
     <title>sidframe </title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="images/faavicon.png" type="image/x-icon">
     <script defer src="/_vercel/insights/script.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
 <body>
@@ -20,26 +22,31 @@
         <h1 id="heading">sidframe.</h1>
         <p>Documenting thoughts, code & growth</p>
 
-        <div class="navbar">
-            <a id="nav-btn" href="index.html" class="nav-link">Home</a>
-            <a id="nav-btn" href="about.html" class="nav-link">About</a>
-            <a id="nav-btn" href="news.html" class="nav-link">News</a>
-            <a id="nav-btn" href="contact.html" class="nav-link">Contact</a>
-            <a id="nav-btn" href="https://buymeacoffee.com/sidisreal" class="nav-link" target="_blank"><i class="fa-solid fa-mug-hot"></i></a>
-            
-        </div>
+        <nav class="navbar" aria-label="Main Navigation">
+            <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Toggle menu">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </button>
+            <div id="nav-list" class="nav-list">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="news.html" class="nav-link">News</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="https://buymeacoffee.com/sidisreal" class="nav-link" target="_blank" rel="noopener"><i
+                        class="fa-solid fa-mug-hot" aria-hidden="true"></i><span class="sr-only">Buy me a coffee</span></a>
+            </div>
+        </nav>
 
         <input type="text" id="searchInput" placeholder="Search posts...">
     </header>
 
     <main class="blog-container"></main>
-<script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="sidisreal" data-description="Support me on Buy me a coffee!" data-message="" data-color="#ffdd00" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
-    <footer>
+    
+    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
+        data-id="sidisreal" data-description="Support me on Buy me a coffee!" data-message="" data-color="#ffdd00"
+        data-position="Right" data-x_margin="18" data-y_margin="18"></script>
 
-        <!-- <div class="contact">
-        <h2>Get in Touch</h2>
-        <p>If you'd like to reach out, feel free to email me at <a href=""></a>
-    </div> -->
+
+    <footer>
         <div class="eren">
             <div class="info">
                 <h3>Contact Me</h3>
@@ -60,8 +67,6 @@
                 <p>I'm Sid, a passionate developer and blogger sharing my journey in tech and life.</p>
             </div>
         </div>
-
-        
 
         <p>&copy; 2025 sidframe. All rights reserved. | Terminal by Sid</p>
     </footer>
