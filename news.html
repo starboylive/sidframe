@@ -101,7 +101,7 @@
                 const link = article.url || `post.html?id=${article.id || ''}`;
 
                 const card = document.createElement('div');
-                card.className = 'post-card';
+                card.className = 'post-card in-view';
                 card.innerHTML = `
                     <a class="news-media" href="${link}" ${article.url ? 'target="_blank" rel="noopener"' : ''}>
                       <img src="${img}" class="post-thumb" alt="${title}">
