@@ -102,10 +102,12 @@
                 const card = document.createElement('div');
                 card.className = 'post-card';
                 card.innerHTML = `
-                    <img src="${img}" class="post-thumb" alt="${title}">
+                    <a class="news-media" href="${link}" ${article.url ? 'target="_blank" rel="noopener"' : ''}>
+                      <img src="${img}" class="post-thumb" alt="${title}">
+                    </a>
                     <div class="post-content">
                         <span class="news-badge">NEWS</span>
-                        <h2>${title}</h2>
+                        <h2><a class="news-link" href="${link}" ${article.url ? 'target="_blank" rel="noopener"' : ''}>${title}</a></h2>
                         <p>${desc}</p>
                         <div class="post-meta">
                             <span>${source}</span>
@@ -113,10 +115,6 @@
                         </div>
                     </div>
                 `;
-
-                card.addEventListener('click', () => {
-                    window.open(link, '_blank');
-                });
 
                 container.appendChild(card);
             });

@@ -169,3 +169,12 @@
   transition: 0.3s ease;
   cursor: pointer;
 }
+
+/* link styles for news items */
+.news-link, .news-media {
+  color: inherit;
+  text-decoration: none;
+}
+.news-link:hover, .news-media:hover {
+  text-decoration: underline;
+}
