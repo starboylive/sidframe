@@ -47,42 +47,41 @@
         const container = document.querySelector(".blog-container");
         let allNews = [];
 
-        function fetchNews() {
-            fetch('/api/news')
-                .then(res => {
-                    if (!res.ok) throw new Error('API not available');
-                    return res.text();
+        // Primary: load local posts.json so static hosts (Vercel) always show posts
+        function loadLocalPosts(){
+            fetch('posts.json')
+                .then(r => r.json())
+                .then(posts => {
+                    allNews = posts;
+                    renderNews(posts);
                 })
-                .then(text => {
-                    try {
-                        return JSON.parse(text);
-                    } catch (e) {
-                        throw new Error('Invalid JSON from API');
-                    }
-                })
-                .then(data => {
-                    const articles = data.articles || data;
-                    allNews = Array.isArray(articles) ? articles : [];
-                    renderNews(allNews);
-                })
-                .catch(err => {
-                    // Fallback to local posts.json for static hosts
-                    console.warn('News API failed, falling back to posts.json', err);
-                    fetch('posts.json')
-                        .then(r => r.json())
-                        .then(posts => {
-                            allNews = posts;
-                            renderNews(posts);
-                        })
-                        .catch(e => {
-                            console.error('Fallback failed', e);
-                            container.innerHTML = `<p class="no-posts">No news found.</p>`;
-                        });
+                .catch(e => {
+                    console.warn('Could not load local posts.json', e);
                 });
         }
 
-        fetchNews();
-        setInterval(fetchNews, 300000);
+        // Secondary: attempt to fetch remote /api/news and update view if available
+        function tryUpdateFromApi(){
+            fetch('/api/news')
+                .then(res => {
+                    if(!res.ok) throw new Error('API not available');
+                    return res.json();
+                })
+                .then(data => {
+                    const articles = data.articles || data;
+                    if(Array.isArray(articles) && articles.length){
+                        allNews = articles;
+                        renderNews(articles);
+                    }
+                })
+                .catch(err => {
+                    console.info('News API not available or returned invalid data', err);
+                });
+        }
+
+        loadLocalPosts();
+        tryUpdateFromApi();
+        setInterval(tryUpdateFromApi, 300000);
 
         function renderNews(news) {
             container.innerHTML = "";
