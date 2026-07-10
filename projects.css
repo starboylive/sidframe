@@ -129,6 +129,11 @@
     flex-direction: column;
   }
 
+  .navbar{
+     width: 90%;
+  }
+
+
   .post-card .post-thumb {
     width: 100%;
     height: 180px;
