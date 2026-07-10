@@ -14,7 +14,7 @@ sidframe is my personal website where I share blogs, showcase projects, document
 
 📝 Development logs and problem-solving writeups documenting my approaches, experiments, and learning journey.
 
-🌟 Features
+## 🌟 Features
 
 - Responsive modern UI
 - Authentication
