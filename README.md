@@ -5,10 +5,15 @@ Documenting thoughts, code, projects & the journey of becoming a better develope
 sidframe is my personal website where I share blogs, showcase projects, document problem-solving approaches, and write about everything I learn while building software.
 
 ✨ What's New
+
 🎨 Completely refreshed UI with a cleaner and more modern design.
+
 🔐 Authentication system for personalized user experience.
+
 📂 New Projects section to showcase what I'm building.
+
 📝 Development logs and problem-solving writeups documenting my approaches, experiments, and learning journey.
+
 🌟 Features
 
 - Responsive modern UI
