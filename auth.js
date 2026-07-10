@@ -20,7 +20,7 @@ async function signInWithProvider(provider) {
     const { error } = await supabase.auth.signInWithOAuth({
       provider,
       options: {
-        redirectTo: window.location.origin + '/index.html'
+        redirectTo: window.location.origin
       }
     });
 
@@ -28,6 +28,7 @@ async function signInWithProvider(provider) {
       throw error;
     }
   } catch (error) {
+    console.error(error);
     showMessage(error.message || 'Authentication failed.', true);
   }
 }
