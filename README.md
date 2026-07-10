@@ -41,6 +41,9 @@ This isn't just a portfolio.
 
 It's a place where I publicly document what I'm learning, the projects I'm build, the problems I solve, and the progress I make as a developer.
 
+### Link To SidFrame site! 
+## https://sidframe.vercel.app
+
 ## 🎀 Screenshots!
 
 <img width="1871" height="1040" alt="image" src="https://github.com/user-attachments/assets/ee558e77-3d71-4fdf-ba9f-318de4a0f8c7" />
