@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sidframe · Login</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="images/faavicon.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <a href="index.html" class="back">← Back to Blog</a>
+
+  <main class="auth-page">
+    <section class="auth-card">
+      <p class="auth-eyebrow">Supabase Auth</p>
+      <h1 data-auth-title>Welcome back</h1>
+      <p class="auth-copy" data-auth-copy>Sign in to your account or create a new one.</p>
+
+      <div class="auth-form" data-auth-form>
+        <button type="button" class="auth-submit provider-btn" data-provider="google">Continue with Google</button>
+        <button type="button" class="auth-submit provider-btn" data-provider="github">Continue with GitHub</button>
+      </div>
+
+      <p class="auth-message" data-auth-message></p>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="guard.js"></script>
+  <script src="auth.js"></script>
+</body>
+</html>

@@ -25,6 +25,7 @@
                 <a id="nav-btn-n" href="index.html">Blog</a>
                 <a id="nav-btn-n" href="projects.html">Projects</a>
                 <a id="nav-btn-n" href="news.html" class="active">News</a>
+                <a id="nav-btn-n" href="login.html" data-auth-link>Login</a>
             </nav>
         </div>
     </header>
@@ -44,6 +45,9 @@
         <div class="blog-container"></div>
     </section>
 
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="guard.js"></script>
+    <script src="auth.js"></script>
     <script>
         const container = document.querySelector(".blog-container");
         let allNews = [];
