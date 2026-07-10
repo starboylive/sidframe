@@ -84,6 +84,15 @@
         tryUpdateFromApi();
         setInterval(tryUpdateFromApi, 300000);
 
+        function sortNewsById(items) {
+            return [...items].sort((a, b) => {
+                const idA = Number(a.id);
+                const idB = Number(b.id);
+                if (!Number.isNaN(idA) && !Number.isNaN(idB)) return idB - idA;
+                return String(b.id).localeCompare(String(a.id));
+            });
+        }
+
         function renderNews(news) {
             container.innerHTML = "";
 
@@ -92,7 +101,8 @@
                 return;
             }
 
-            news.forEach(article => {
+            const sortedNews = sortNewsById(news);
+            sortedNews.forEach(article => {
                 const img = article.urlToImage || article.image || article.thumbnail || 'images/main.png';
                 const title = article.title || article.heading || article.name || 'Untitled';
                 const desc = article.description || article.excerpt || (Array.isArray(article.content) ? (typeof article.content[0] === 'string' ? article.content[0] : (article.content[0].text || '')) : '') || '';

@@ -1,17 +1,27 @@
 let allPosts = [];
 
+function sortPostsById(posts) {
+  return [...posts].sort((a, b) => {
+    const idA = Number(a.id);
+    const idB = Number(b.id);
+    if (!Number.isNaN(idA) && !Number.isNaN(idB)) return idB - idA;
+    return String(b.id).localeCompare(String(a.id));
+  });
+}
+
 fetch("posts.json")
 .then(res => res.json())
 .then(posts => {
-  allPosts = posts;
-  renderPosts(posts);
+  allPosts = sortPostsById(posts);
+  renderPosts(allPosts);
 });
 
 function renderPosts(posts) {
   const container = document.querySelector(".blog-container");
   container.innerHTML = "";
 
-  posts.forEach(post => {
+  const sortedPosts = sortPostsById(posts || []);
+  sortedPosts.forEach(post => {
     const card = document.createElement("article");
     card.classList.add("post-card");
 

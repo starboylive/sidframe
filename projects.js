@@ -2,6 +2,15 @@
 const projectsContainer = document.querySelector('.blog-container');
 let allProjects = [];
 
+function sortProjectsById(items) {
+    return [...items].sort((a, b) => {
+        const idA = Number(a.id);
+        const idB = Number(b.id);
+        if (!Number.isNaN(idA) && !Number.isNaN(idB)) return idB - idA;
+        return String(b.id).localeCompare(String(a.id));
+    });
+}
+
 function loadProjects(){
     console.log('projects.js: loading posts.json');
     if(projectsContainer) projectsContainer.innerHTML = `<p class="no-posts">Loading projects…</p>`;
@@ -13,8 +22,8 @@ function loadProjects(){
         .then(posts => {
             const projects = posts.filter(p => (p.tags||[]).some(t => t && t.toString().toLowerCase().trim() === 'personalwork'));
             console.log('projects.js: found', projects.length, 'personalWork posts');
-            allProjects = projects;
-            renderProjects(projects);
+            allProjects = sortProjectsById(projects);
+            renderProjects(allProjects);
         })
         .catch(e => {
             console.error('Could not load posts.json', e);
@@ -39,7 +48,8 @@ function renderProjects(news){
         return;
     }
 
-    news.forEach(article => {
+    const sortedNews = sortProjectsById(news || []);
+    sortedNews.forEach(article => {
         const img = article.image || 'images/main.png';
         const title = article.title || 'Untitled';
         const desc = article.excerpt || (Array.isArray(article.content) ? (article.content[0].text || '') : '');
