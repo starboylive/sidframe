@@ -10,15 +10,17 @@ sidframe is my personal website where I share blogs, showcase projects, document
 📂 New Projects section to showcase what I'm building.
 📝 Development logs and problem-solving writeups documenting my approaches, experiments, and learning journey.
 🌟 Features
-Responsive modern UI
-Authentication
-Technical blog
-Projects showcase
-Development journal
-Problem-solving documentation
-Dark theme
-Fast and lightweight
-🛠️ Tech Stack
+
+- Responsive modern UI
+- Authentication
+- Technical blog
+- Projects showcase
+- Development journal
+- Problem-solving documentation
+- Dark theme
+- Fast and lightweight
+
+## 🛠️ Tech Stack
 HTML
 CSS
 JavaScript
