@@ -398,6 +398,130 @@ footer {
 /* LINKS */
 #linked {
   color: #808080;
+}
+
+@media (max-width: 900px) {
+  header {
+    padding: 32px 16px 20px;
+  }
+
+  header h1 {
+    font-size: 30px;
+  }
+
+  .navbar {
+    width: min(96%, 540px);
+    padding: 0.55rem 0.7rem;
+  }
+
+  .blog-container {
+    margin: 24px auto 36px;
+    padding: 0 0.8rem;
+  }
+
+  .post-container {
+    margin: 3rem auto;
+    padding: 1.25rem 1rem 2rem;
+  }
+
+  .contact {
+    margin: 2rem 1rem 0;
+    padding: 1.5rem 1rem;
+  }
+
+  .eren {
+    width: min(96%, 70rem);
+    gap: 1rem;
+  }
+
+  .info {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  #heading {
+    font-size: clamp(3rem, 13vw, 4.3rem);
+    line-height: 0.95;
+    letter-spacing: -0.05em;
+    margin-bottom: 0.25rem;
+  }
+
+  #subheading6969 {
+    margin-top: 0.3rem;
+    margin-bottom: 0.9rem;
+    padding: 0 0.8rem;
+    font-size: 0.95rem;
+  }
+
+  header input {
+    width: min(100%, 290px);
+    margin-top: 1rem;
+  }
+
+  .blog-container {
+    gap: 1rem;
+  }
+
+  .post-card {
+    padding: 0.9rem;
+  }
+
+  .post-card .post-row {
+    flex-direction: column;
+  }
+
+  .post-card .post-thumb {
+    width: 100%;
+    height: 180px;
+    flex: 0 0 auto;
+  }
+
+  .post-card .post-body {
+    gap: 0.35rem;
+  }
+
+  .search-section {
+    padding: 0.8rem 1rem 1.4rem;
+  }
+
+  #searchInput {
+    padding: 0.85rem 1rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .back {
+    margin: 1rem;
+  }
+
+  .navbar {
+    width: min(96%, 520px);
+    border-radius: 1.1rem;
+  }
+
+  .nav-list {
+    width: min(92%, 340px);
+  }
+
+  .post-card .excerpt {
+    font-size: 0.92rem;
+  }
+
+  .post-container h1 {
+    font-size: 1.65rem;
+  }
+
+  .post-image {
+    max-height: 16rem;
+  }
+
+  footer {
+    padding: 1.5rem 0.9rem 2rem;
+  }
+}
+
+#linked {
   text-decoration: none;
   transition: color 0.2s ease, transform 0.2s ease;
 }
