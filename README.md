@@ -26,10 +26,15 @@ sidframe is my personal website where I share blogs, showcase projects, document
 - Fast and lightweight
 
 ## 🛠️ Tech Stack
+
 HTML
+
 CSS
+
 JavaScript
-Supabase Authentication (if you're using Firebase; otherwise replace it with your auth provider)
+
+Supabase Authentication 
+
 
 📖 Purpose
 This isn't just a portfolio.
