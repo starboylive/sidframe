@@ -1,13 +1,19 @@
 const supabaseUrl = 'https://ulljqihdxklweoodxrfq.supabase.co';
 const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVsbGpxaWhkeGtsd2Vvb2R4cmZxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODM2NTk3NjMsImV4cCI6MjA5OTIzNTc2M30.Dvdka6E6WPUNqeDZzuTz_EkRHGNmsGXfF9nJpVFH1vQ';
 
-const supabase = window.supabase.createClient(supabaseUrl, supabaseAnonKey);
+console.log('auth.js loaded');
+const supabaseClient = window.supabaseClient || window.supabase.createClient(supabaseUrl, supabaseAnonKey);
+window.supabaseClient = supabaseClient;
 
 const authForm = document.querySelector('[data-auth-form]');
 const authTitle = document.querySelector('[data-auth-title]');
 const authCopy = document.querySelector('[data-auth-copy]');
 const authMessage = document.querySelector('[data-auth-message]');
 const providerButtons = document.querySelectorAll('.provider-btn');
+console.log('providerButtons count:', providerButtons.length);
+window.addEventListener('error', (event) => {
+  console.error('Global JS error:', event.error || event.message, event.filename, event.lineno, event.colno);
+});
 
 function showMessage(message, isError = false) {
   if (!authMessage) return;
@@ -17,10 +23,14 @@ function showMessage(message, isError = false) {
 
 async function signInWithProvider(provider) {
   try {
+    const redirectUrl = window.location.origin + '/';
+    console.log('OAuth start', provider, 'redirectTo', redirectUrl);
+    showMessage('Redirecting to ' + provider + '…');
+
     const { error } = await supabase.auth.signInWithOAuth({
       provider,
       options: {
-        redirectTo: window.location.origin
+        redirectTo: redirectUrl
       }
     });
 
@@ -28,7 +38,7 @@ async function signInWithProvider(provider) {
       throw error;
     }
   } catch (error) {
-    console.error(error);
+    console.error('OAuth error:', error);
     showMessage(error.message || 'Authentication failed.', true);
   }
 }
