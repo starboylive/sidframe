@@ -2,8 +2,8 @@ const supabaseUrl = 'https://ulljqihdxklweoodxrfq.supabase.co';
 const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVsbGpxaWhkeGtsd2Vvb2R4cmZxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODM2NTk3NjMsImV4cCI6MjA5OTIzNTc2M30.Dvdka6E6WPUNqeDZzuTz_EkRHGNmsGXfF9nJpVFH1vQ';
 
 console.log('auth.js loaded');
-const supabaseClient = window.supabaseClient || window.supabase.createClient(supabaseUrl, supabaseAnonKey);
-window.supabaseClient = supabaseClient;
+const supabase = window.supabaseClient || (window.supabase ? window.supabase.createClient(supabaseUrl, supabaseAnonKey) : null);
+window.supabaseClient = supabase;
 
 const authForm = document.querySelector('[data-auth-form]');
 const authTitle = document.querySelector('[data-auth-title]');
